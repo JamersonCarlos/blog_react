@@ -1,0 +1,31 @@
+.postDetails { 
+    margin-bottom: 2em;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postDetails h2 { 
+    margin-bottom: .4em;
+}
+
+.postDetails > div { 
+    margin-bottom: 1.2em;
+    display: flex;
+}
+
+.postDetails > div > p { 
+    margin-right: .5em;
+}
+
+.postDetails > div > p > span { 
+    font-weight: bold;
+}
+
+.createdBy { 
+    font-style: italic;
+    color: #444;
+    font-size: .8em;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+}
