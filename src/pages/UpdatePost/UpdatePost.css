@@ -1,0 +1,11 @@
+.edit_post { 
+    text-align: center;
+}
+.edit_post > p { 
+    color: #aaa;
+}
+
+.edit_post > form > img { 
+    max-width: 80%;
+    margin-bottom: 10px;
+}
