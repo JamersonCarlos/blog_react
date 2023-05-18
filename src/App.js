@@ -17,6 +17,9 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Post from './pages/post/Post';
+import Search from './pages/Search/Search';
+import UpdatePost from './pages/UpdatePost/UpdatePost';
 
 //Import Components
 import NavBar from './components/NavBar';
@@ -24,7 +27,6 @@ import Footer from './components/Footer';
 
 //Import context
 import { AuthProvider } from './context/AuthContext';
-import Search from './pages/Search/Search';
 
 function App() {
 
@@ -60,6 +62,8 @@ function App() {
                 <Route path='/posts/create' element={ user ? <CreatePost/> : <Navigate to="/login"/>}></Route>
                 <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to="/login"/>}></Route>
                 <Route path='/search' element={user ? <Search/> : <Navigate to="/login"/>}></Route>
+                <Route path='/posts/:id' element={<Post/>}></Route>
+                <Route path='/posts/update/:id' element={<UpdatePost/>}></Route>
               </Routes>
             </div>
           <Footer/>
