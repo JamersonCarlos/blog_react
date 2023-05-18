@@ -1,16 +1,19 @@
 import React from 'react'
-import { useSearchParams, Link} from 'react-router-dom';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import PostDetails from '../../components/PostDetails';
-
+import { useQuery } from '../../hooks/useQuery';
+import { Link } from 'react-router-dom';
+import './Search.css';
 
 
 function Search() {
-    const [params] = useSearchParams();
-    const {documents: posts, loading} = useFetchDocuments("posts", params);
+    const query = useQuery();
+    const search = query.get("q");
+
+    const {documents: posts, loading} = useFetchDocuments("posts", search);
   return (
-    <div>
-         <h1>Resultados encontrados para: {params}</h1>
+    <div className='searchResults'>
+         <h1>Resultados encontrados para: {search}</h1>
         {posts && posts.map((post) => (
             <PostDetails post={post}/>
         )) }
