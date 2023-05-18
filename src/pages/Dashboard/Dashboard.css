@@ -1,0 +1,26 @@
+.dashboard { 
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.dashboard > p { 
+    color: #aaa;
+}
+
+.line { 
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 10px;
+}
+
+.postConfig { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+}
