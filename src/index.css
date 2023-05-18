@@ -98,6 +98,7 @@ input,textarea {
   color: black;
   border: 1px solid black;
   padding: 7px 30px;
+  margin: auto;
 }
 
 .btn:hover { 
